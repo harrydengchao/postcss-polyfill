@@ -1,0 +1,32 @@
+.test-overflow-scrolling {
+  overflow-x: scroll;
+  width: 200px;
+  height: 100px;
+}
+
+.test-filter-gradient {
+  width: 200px;
+  height: 100px;
+  background: linear-gradient(to bottom, rgb(255, 0, 0), #7db9e8);
+}
+
+.test-filter-opacity {
+  width: 200px;
+  height: 100px;
+  background-color: #000000;
+  opacity: 0.5;
+  color: #ff0000;
+}
+
+.test-filter-background {
+  width: 200px;
+  height: 100px;
+  background-color: rgba(238,153,34,0.502);
+}
+
+.test-inline-block {
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+  background-color: #ff00ff;
+}
