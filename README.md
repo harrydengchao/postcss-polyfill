@@ -3,8 +3,8 @@
 [PostCSS] plugin polyfill.
 
 [PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/harrydengchao/postcss-polyfill.svg
-[ci]:      https://travis-ci.org/harrydengchao/postcss-polyfill
+[ci-img]:  https://img.shields.io/npm/v/postcss-polyfill.svg
+[ci]:      https://npmjs.org/package/postcss-polyfill
 
 ---
 
@@ -19,7 +19,18 @@ $ npm i -D postcss-polyfill
 ## Usage
 
 ```js
-postcss([ require('postcss-polyfill') ])
+postcss([require('postcss-polyfill')])
+
+// or
+
+postcss([require('postcss-polyfill')({
+  'overflow-scrolling': false,
+  'filter-gradient': true,
+  'filter-opacity': true,
+  'filter-background': true,
+  'inline-block': true,
+})])
+
 ```
 
 ---

@@ -1,6 +1,6 @@
 {
   "name": "postcss-polyfill",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "PostCSS plugin polyfill",
   "keywords": [
     "postcss",
@@ -9,7 +9,7 @@
     "postcss-polyfill"
   ],
   "scripts": {
-    "version": "bump --prompt",
+    "tag": "bump --prompt",
     "test": "node test/index.test.js"
   },
   "author": "dengchao2056@126.com",
@@ -20,11 +20,11 @@
   },
   "homepage": "https://github.com/harrydengchao/postcss-polyfill",
   "dependencies": {
-    "postcss": "^7.0.6"
+    "postcss": "^7.0.6",
+    "rgbx2hex": "^1.0.0"
   },
   "devDependencies": {
     "postcss-loader": "^3.0.0",
-    "rgbx2hex": "^1.0.0",
     "version-bump-prompt": "^4.2.2"
   },
   "eslintConfig": {
