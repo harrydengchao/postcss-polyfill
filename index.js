@@ -58,31 +58,34 @@ module.exports = postcss.plugin('postcss-polyfill', function (opts = {}) {
         rule.walkDecls(/^(background|background-image)$/, function(decl) {
           if (hasValuePrefix(rule, 'linear-gradient') && !hasProp(rule, 'filter')) {
             // 属性值列表
-            let tokens = /linear-gradient\(\s*(to\s+bottom|to\s+top|to\s+left|to\s+right)\s*,\s*(.+)\s*,\s*(.+)\s*\)/.exec(decl.value)
+            let tokens = /linear-gradient\(\s*(to\s+\w+)\s*,\s*(.+)\s*,\s*(.+)\s*\)/.exec(decl.value)
+            tokens[1] = tokens[1].replace(/^(to)\s+(\w+)$/, ($0, $1, $2) => (`${$1}_${$2}`))
+            tokens[2] = tokens[2].replace(/^(#[0-9A-z]+|rgba?\(.+\))\s*([0-9%]+)?$/, ($0, $1) => ($1))
+            tokens[3] = tokens[3].replace(/^(#[0-9A-z]+|rgba?\(.+\))\s*([0-9%]+)?$/, ($0, $1) => ($1))
             let gradient = {}
             switch (tokens[1]) {
-              case 'to bottom':
+              case 'to_bottom':
                 gradient = {
                   startColorstr: tokens[2],
                   endColorstr: tokens[3],
                   GradientType: 0
                 }
                 break
-              case 'to top':
+              case 'to_top':
                 gradient = {
                   startColorstr: tokens[3],
                   endColorstr: tokens[2],
                   GradientType: 0
                 }
                 break
-              case 'to right':
+              case 'to_right':
                 gradient = {
                   startColorstr: tokens[2],
                   endColorstr: tokens[3],
                   GradientType: 1
                 }
                 break
-              case 'to right':
+              case 'to_right':
                 gradient = {
                   startColorstr: tokens[3],
                   endColorstr: tokens[2],

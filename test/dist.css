@@ -12,6 +12,13 @@
   background: linear-gradient(to bottom, rgb(255, 0, 0), #7db9e8);
 }
 
+.test-filter-gradient_2 {
+  width: 200px;
+  height: 100px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f36b6f, endColorstr=#e4393c, GradientType=1);
+  background-image: linear-gradient(to right, #f36b6f 0%, #e4393c 100%);
+}
+
 .test-filter-opacity {
   width: 200px;
   height: 100px;

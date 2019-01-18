@@ -61,6 +61,12 @@ postcss([require('postcss-polyfill')({
   background: linear-gradient(to bottom, rgb(255, 0, 0), #7db9e8);
 }
 
+.test-filter-gradient_2 {
+  width: 200px;
+  height: 100px;
+  background-image: linear-gradient(to right, #f36b6f 0%, #e4393c 100%);
+}
+
 .test-filter-opacity {
   width: 200px;
   height: 100px;
@@ -72,7 +78,7 @@ postcss([require('postcss-polyfill')({
 .test-filter-background {
   width: 200px;
   height: 100px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(238,153,34,0.502);
 }
 
 .test-inline-block {
@@ -95,8 +101,15 @@ postcss([require('postcss-polyfill')({
 .test-filter-gradient {
   width: 200px;
   height: 100px;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff0000, endColorstr=#7db9e8, GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF0000, endColorstr=#7db9e8, GradientType=0);
   background: linear-gradient(to bottom, rgb(255, 0, 0), #7db9e8);
+}
+
+.test-filter-gradient_2 {
+  width: 200px;
+  height: 100px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f36b6f, endColorstr=#e4393c, GradientType=1);
+  background-image: linear-gradient(to right, #f36b6f 0%, #e4393c 100%);
 }
 
 .test-filter-opacity {
@@ -111,8 +124,8 @@ postcss([require('postcss-polyfill')({
 .test-filter-background {
   width: 200px;
   height: 100px;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000, endColorstr=#80000000, GradientType=0);
-  background-color: rgba(0, 0, 0, 0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#80EE9922, endColorstr=#80EE9922, GradientType=0);
+  background-color: rgba(238,153,34,0.502);
 }
 
 .test-inline-block {
