@@ -25,16 +25,16 @@ function hasValuePrefix(rule, prefix) {
 module.exports = postcss.plugin('postcss-polyfill', function (opts = {}) {
   opts = {
     // -webkit-overflow-scrolling: touch;
-    'overflow-scrolling': true,
+    'overflow-scrolling': false,
     // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1e5799', endColorstr='#ff7db9e8', GradientType=0);
-    'filter-gradient': true,
+    'filter-gradient': false,
     // filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=xx);
-    'filter-opacity': true,
+    'filter-opacity': false,
     // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000, endColorstr=#80000000, GradientType=0);
-    'filter-background': true,
+    'filter-background': false,
     // *display: inline;
     // *zoom: 1;
-    'inline-block': true,
+    'inline-block': false,
     ...opts
   }
   // Work with options here

@@ -19,10 +19,6 @@ $ npm i -D postcss-polyfill
 ## Usage
 
 ```js
-postcss([require('postcss-polyfill')])
-
-// or
-
 postcss([require('postcss-polyfill')({
   'overflow-scrolling': false,
   'filter-gradient': true,
@@ -39,11 +35,11 @@ postcss([require('postcss-polyfill')({
 
 | prop                   | value          | default |
 | ---                    | ---            | ---     |
-| `'overflow-scrolling'` | `true` `false` | `true` |
-| `'filter-gradient'`    | `true` `false` | `true` |
-| `'filter-opacity'`     | `true` `false` | `true` |
-| `'filter-background'`  | `true` `false` | `true` |
-| `'inline-block'`       | `true` `false` | `true` |
+| `'overflow-scrolling'` | `true` `false` | `false` |
+| `'filter-gradient'`    | `true` `false` | `false` |
+| `'filter-opacity'`     | `true` `false` | `false` |
+| `'filter-background'`  | `true` `false` | `false` |
+| `'inline-block'`       | `true` `false` | `false` |
 
 ---
 
